@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="jquery.scrollTo.min.js"></script>
+    <script>
+		
+		jQuery(function($)
+		{
+			//zresetuj scrolla
+			$.scrollTo(0);
+	
+			$('.scrollup').click(function() { $.scrollTo($('body'), 1000); }); //przewiń do body, czas 1 sek
+		}
+		);
+		
+		//pokaż podczas przewijania
+		$(window).scroll(function()
+		{
+			if($(this).scrollTop()>50) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		}
+		);
+
+
+        $(document).ready(function() {
+            var NavY = $('#navigation').offset().top;
+             
+            var stickyNav = function(){
+            var ScrollY = $(window).scrollTop();
+                  
+            if (ScrollY > NavY) { 
+                $('#navigation').addClass('sticky');
+            } else {
+                $('#navigation').removeClass('sticky'); 
+            }
+            };
+             
+            stickyNav();
+             
+            $(window).scroll(function() {
+                stickyNav();
+            });
+            });
+	</script>
+    </head>
+    <body>
+        <main>
+            <a href="#" class="scrollup"></a>
+            <nav>
+                 <div id="navigation">
+                     <ul class="navig">
+                         <li><a>Main</a></li>
+                         <li><a>Second</a></li>
+                         <li><a>Third</a></li>
+                     </ul>
+                 </div>
+                 <div class="nav_header">
+                    <h1 id="nav_h1"><span id="nav_span">Page</span> Title</h1>
+                    <h3 id="nav_h3">Page Description</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet magna blandit tortor tempus iaculis. Suspendisse purus mauris, elementum et tortor lacinia, pulvinar venenatis tortor. In ipsum risus, pretium eu venenatis ut, cursus id diam.</p>
+                 </div>
+            </nav>
+            <section>
+                <header>
+                <div class="main_header">
+                    <h1 class="h1">Main Header</h1>
+                    <h3>Section Desciption. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                </div>
+                </header>
+
+                <div class="rect">
+                        <img src="img/a.png" alt="Image"/>
+                        <p class="rect_p">
+                            Fusce est diam, vehicula ac lectus eu, imperdiet auctor ex. Integer nunc lacus, pharetra ac pretium sed, suscipit sit amet turpis. Sed rhoncus lacinia ligula eu facilisis. Nullam at rhoncus neque. Nam semper massa quam. Integer augue odio, malesuada quis tristique ac, mattis vel risus.
+                        </p>
+                    <div style="clear: both;"></div>
+                </div>
+                <div class="rect">
+                    <img src="img/b.png" alt="Image"/>
+                    <p class="rect_p">
+                        Fusce est diam, vehicula ac lectus eu, imperdiet auctor ex. Integer nunc lacus, pharetra ac pretium sed, suscipit sit amet turpis. Sed rhoncus lacinia ligula eu facilisis. Nullam at rhoncus neque. Nam semper massa quam. Integer augue odio, malesuada quis tristique ac, mattis vel risus.                    
+                    </p>
+                    <div style="clear: both;"></div>
+                </div>
+            <div class="rect">
+                <img src="img/c.png" alt="Image"/>
+                <p class="rect_p">
+                    Fusce est diam, vehicula ac lectus eu, imperdiet auctor ex. Integer nunc lacus, pharetra ac pretium sed, suscipit sit amet turpis. Sed rhoncus lacinia ligula eu facilisis. Nullam at rhoncus neque. Nam semper massa quam. Integer augue odio, malesuada quis tristique ac, mattis vel risus.                
+                </p>
+                <div style="clear: both;"></div>
+            </div>
+            </section>
+            <section>
+                <div class="sqrt">
+                    <form>
+                        <h1 class="comment_header">Send Message</h1>
+                        <label class="email">From</label><br>
+                        <input type="email" class="email_input" name="email" placeholder="email"><br>
+                        <label class="email">Subject</label><br>
+                        <input type="text" class="email_input" name="email" placeholder="subject"><br>
+                        <label class="email">Message</label><br>
+                        <textarea class="email_content" name="email_content" cols="54" rows="8"></textarea><br>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="p_footer"><p>2021 &copy; Konstancja Mielczarek <a href="#" target="_blank"><i class="icon-facebook-rect"></i></a><a href="#" target="_blank"><i class="icon-googleplus-rect"></i></a></p></div>
+        </footer>
+    </body>
+</html>
