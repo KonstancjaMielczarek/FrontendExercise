@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="description" content="Portfolio Mielczarek Konstancja" />
+    <title>Konstancja Mielczarek</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato|Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="timer.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script>
+		
+		jQuery(function($)
+		{
+			//zresetuj scrolla
+			$.scrollTo(0);
+			
+			$('#link1').click(function() { $.scrollTo($('.scrollup'), 500); });
+			$('#link2').click(function() { $.scrollTo($('#projects'), 1000); });
+			$('#link3').click(function() { $.scrollTo($('.tile2'), 1000); });
+	
+			$('.scrollup').click(function() { $.scrollTo($('body'), 1000); });
+		}
+		);
+		
+		//pokaż podczas przewijania
+		$(window).scroll(function()
+		{
+			if($(this).scrollTop()>50) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		}
+		);
+	</script>
+</head>
+<body onload="time();">
+    <div id="container">
+        <header>
+            <div id="logo"><b>Konstancja Mielczarek</b></div>
+            <div id="clock">10:00:00</div>
+            <div style="clear: both;"></div>
+        </header>
+
+            <nav>
+                <ul id="navigation">
+                    <!-- <li class="nav_li"><a id="link1" href="#">About Me</a></li> -->
+                    <li class="nav_li"><a id="link2" href="#">My Projects</a></li>
+                    <li class="nav_li"><a id="link3" href="#">Contact</a></li>
+                    <li class="nav_right"><a href="https://www.linkedin.com/in/konstancja-mielczarek/" target="_blank" class="sociallink"><i class=" icon-linkedin-squared"></i></a></li>
+                    <li class="nav_right"><a href="https://github.com/KonstancjaMielczarek" target="_blank" class="sociallink"><i class=" icon-github-circled"></i></a></li>
+                </ul>
+            </nav>
+        <main>
+            <a href="#" class="scrollup"></a>
+            <h1 class="main_header">About me</h1>
+            <div class="tile1">
+                <p>I am a fourth year Information Technology Student at Silesian University in Poland. My specialization is web application design.
+                    Currently, I am writing an engineering thesis on "Automatic detection system for the number of people in a room". In the free I like you learn HTML5, CSS3, JS, SQL and MERN.
+                </p>
+            </div>
+            <h1 class="main_header">Technologies I know</h1>
+            <div class="tile1">
+                <ul class="main_list">
+                    <li><b>Technology: </b>Java Enterprise Edition, Enterprise JavaBeans, Java Persistence API</li>
+                    <li><b>Frameworks: </b>JavaServer Faces, PhpSlim, Laravel</li>
+                    <li><b>Database: </b>MySQL</li>
+                    <li><b>Libraries: </b>Bootstrap, PrimeFaces, PHPMailer</li>
+                    <li><b>Template engine: </b>Twig, Blade</li>
+                    <li><b>Programming Languages: </b>Java, PHP, CSS3, JavaScript, HTML5, SQL</li>
+                </ul>
+            </div>
+            <div id="projects">
+            <h1 class="main_header">My projects</h1>
+            <div class="rectangle">
+                <a class ="a_header" href="http://adaa.polsl.pl" target="_blank"><h2 class="img_header">Advanced Data Analysis and its Applications</h2></a>
+                <img src="images/adaa.png" class="img"/>
+                <div class="desc">
+                    <p>Website based on CMS WordPress for creating ADAA (Advanced Data Analysis and its Applications). Available at: 
+                        <a class="a_header" href="http://adaa.polsl.pl" target="_blank">adaa.polsl.pl</a>. Website made during summer internship.</p>
+                    <p>Technologies: WordPress</p>
+                </div>
+            </div>
+            </div>
+            <div class="rectangle">
+                <a class ="a_header" href="#"><h2 class="img_header">Centralny Rejestr Zagrożeń</h2></a>
+                <img src="images/crz.png" class="img"/>
+                <div class="desc">
+                    <p>Website based on CMS WordPress for the internal application of the CRZ system. Extended with a proprietary WordPress plugin to facilitate the categorization of the knowledge base. Website made during summer internship.</p>
+                    <p>Technologies: WordPress</p>
+                </div>
+            </div>
+            <div class="rectangle">
+                <a class ="a_header" href="#"><h2 class="img_header">Stowarzyszenie Elektryków Polskich</h2></a>
+                <img src="images/sep.png" class="img"/>
+                <div class="desc">
+                    <p>Central College of the General Association, Electronics and Mining Automation Section of the Association of Polish Electrical Engineers. Website based on CMS WordPress. Website made during summer internship.</p>
+                    <p>Technologies: WordPress</p>
+                </div>
+            </div>
+            <div class="rectangle">
+                <a class ="a_header" href="#"><h2 class="img_header">Human Detector Application</h2></a>
+                <img src="images/inz.png" class="img"/>
+                <div class="desc">
+                    <p>A web application that focuses on detecting people in the room using the OpenCV image processing library and saves the results in a database. After loggin in, users have access to the report module.</p>
+                    <p>Technologies: JavaEE, JSF, EJB, JPA, PrimeFaces, iText, OpenCV</p>
+                    <ul class="actions special">
+                </div>
+            </div>
+            <div class="rectangle">
+                <a href="projects.html"><button class="rectangle_button">More Projects</button></a>
+            </div>
+            <div class="tile2">
+                <h1 class="black_header">Contact</h1>
+                <br>
+                <table>
+                    <tr>
+                        <th>Email</th>
+                        <th>Adress</th>
+                        <th>Social</th>
+                        <th>CV</th>
+                    </tr>
+                    <tr>
+                        <td>konstancjam12@gmail.com</td>
+                        <td>Poland, Silesian</td>
+                        <td><a href="https://www.linkedin.com/in/konstancja-mielczarek/" target="_blank" class="sociallink"><i class=" icon-linkedin-squared"></i></a>
+                            <a href="https://github.com/KonstancjaMielczarek" target="_blank" class="sociallink"><i class=" icon-github-circled"></i></a></td>
+                        <td>
+                            <a href="KonstancjaMielczarek.pdf" class="sociallink" download>
+                                <i class="icon-download"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </table>     
+            </div>
+        </main>
+        <footer>
+            <p class="p_footer">2020 &copy; Konstancja Mielczarek. All rights reserved.</p>
+        </footer>
+</body>
+</html>

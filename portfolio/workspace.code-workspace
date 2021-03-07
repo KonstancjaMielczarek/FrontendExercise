@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"name": "images",
+			"path": "..\\..\\Documents\\SelfStudy\\MyProjects\\portfolio\\images"
+		},
+		{
+			"name": "app",
+			"path": "."
+		},
+		{
+			"path": "..\\..\\Documents\\SelfStudy\\html\\kurs_html3\\www\\font"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "app"
+	}
+}
